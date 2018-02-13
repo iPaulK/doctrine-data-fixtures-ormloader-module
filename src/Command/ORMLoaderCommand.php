@@ -43,7 +43,7 @@ class ORMLoaderCommand extends Command
     {
         parent::configure();
 
-        $this->setName('orm:data-fixtures:load')
+        $this->setName('data-fixtures:load')
             ->setDescription('Data Fixtures ORMLoder')
             ->addOption('purge-mode-delete', 'delete', InputOption::VALUE_NONE)
             ->addOption('purge-mode-truncate', 'truncate', InputOption::VALUE_NONE);
@@ -65,7 +65,7 @@ EOT
         }
 
         $purger = new ORMPurger();
-        if ($input->getOption('purge-with-truncate')) {
+        if ($input->getOption('purge-mode-truncate')) {
             $purger->setPurgeMode(ORMPurger::PURGE_MODE_TRUNCATE);
         }
 
