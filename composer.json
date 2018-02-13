@@ -1,0 +1,35 @@
+{
+    "name": "ipaulk/doctrine-data-fixtures-ormloader-module",
+    "description": "Doctrine Data Fixtures ORMLoader Module for Zend Framework 3.",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "doctrine",
+        "data-fixtures",
+        "zf3",
+        "module"
+    ],
+    "homepage": "https://github.com/iPaulK/doctrine-data-fixtures-ormloader-module",
+    "authors": [
+        {
+            "name": "Paul K",
+            "email": "ipaulk@gmail.com",
+            "homepage": "https://github.com/iPaulK/"
+        }
+    ],
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "zendframework/zend-mvc": "^2.7 || ^3.0.1",
+        "zendframework/zend-eventmanager": "^2.6.2 || ^3.0",
+        "zendframework/zend-servicemanager": "^2.7.5 || ^3.0.3",
+        "zendframework/zend-modulemanager": "^2.7",
+        "zendframework/zend-debug": "^2.5 || ^3.0",
+        "doctrine/data-fixtures": "^1.2",
+        "doctrine/doctrine-orm-module": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "DoctrineDataFixturesORMLoader\\": "src/"
+        }
+    }
+}
