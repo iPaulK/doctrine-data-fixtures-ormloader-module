@@ -45,6 +45,7 @@ class ORMLoaderCommand extends Command
 
         $this->setName('data-fixtures:load')
             ->setDescription('Data Fixtures ORMLoder')
+            ->addOption('append', 'a', InputOption::VALUE_NONE, 'Append data to existing data') 
             ->addOption('purge-mode-delete', 'delete', InputOption::VALUE_NONE)
             ->addOption('purge-mode-truncate', 'truncate', InputOption::VALUE_NONE);
         
@@ -70,7 +71,7 @@ EOT
         }
 
         $executor = new ORMExecutor($this->entityManager, $purger);
-        $executor->execute($loader->getFixtures(), $input->getOption('purge-mode-delete'));
+        $executor->execute($loader->getFixtures(), $input->hasOption('append'));
     }
 
     /**
