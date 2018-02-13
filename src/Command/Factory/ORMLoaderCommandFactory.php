@@ -4,7 +4,7 @@
  * @license MIT
  */
 
-namespace DoctrineDataFixturesORMLoader\Command;
+namespace DoctrineDataFixturesORMLoader\Command\Factory;
 
 use Interop\Container\ContainerInterface;
 use Zend\ServiceManager\Factory\FactoryInterface;
